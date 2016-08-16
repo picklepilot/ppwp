@@ -5,12 +5,11 @@ Basically, I'm sick of putting all this crap together at the start of each proje
 Take care to remember that this theme is in early and active development, so things might suck for you at first.
 
 ## License
-UnderStrap is released under the terms of the GPL version 3 or (at your option) any later version.
+ppwp is released under the terms of the GPL version 3 or (at your option) any later version.
 
 ## Changelog
-            - ** 0.0.1 8/16/2016 First Commit **
-                  - Initial build
-
+- **0.0.1 8/16/2016 First Commit**
+	- Initial build
 
 ## Features
 
@@ -19,14 +18,9 @@ UnderStrap is released under the terms of the GPL version 3 or (at your option) 
 - All style sheets and js files are combined into minified single files
 - WooCommerce ready
 
-## Starter Theme + HTML Framework = WordPress Theme Framework
-
-The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
-Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
-
 ## SASS
 
-Go ahead and customize the theme on top of Bootstrap styles by adding your own custom SCSS to the custom folder (./src/sass/custom/*).
+Go ahead and customize the theme on top of Bootstrap styles by adding your own custom SCSS to the custom folder `./src/sass/custom/*`
 
 ## Installation
 
