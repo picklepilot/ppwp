@@ -12,10 +12,27 @@ var basePaths = {
     dev: './src/'
 };
 
+var browserSyncOptions = {
+    proxy: "http://localhost",
+    notify: false
+};
+
+var browserSyncWatchFiles = [
+    './css/style.min.css',
+    './js/theme.min.js',
+    './**/*.php'
+];
+
 gulp.task('browser-sync', ['sass'], function() {
-    bs.init({
-        proxy: 'http://localhost'
-    });
+    bs.init(browserSyncWatchFiles, browserSyncOptions);
+});
+
+gulp.task('minify-css', function() {
+	return gulp.src('./src/css/**/*.css')
+			    .pipe(cleanCSS())
+			    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+			    .pipe(concat('style.min.css'))
+			    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('sass', function () {
@@ -26,17 +43,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch("./src/sass/**/*.scss", ['sass']);
-    gulp.watch("./*.php").on('change', bs.reload);
+    gulp.watch("./src/sass/**/*.scss", ['sass', 'minify-css']);
+    gulp.watch("./**/*.php");
 });
 
-gulp.task('minify-css', function() {
-	return gulp.src('./src/css/**/*.css')
-			    .pipe(cleanCSS())
-			    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-			    .pipe(concat('style.min.css'))
-			    .pipe(gulp.dest('./css'));
-});
 
 // run script uglifier and minifier
 gulp.task('scripts', function() {
