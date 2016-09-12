@@ -10,6 +10,9 @@ ppwp is released under the terms of the GPL version 3 or (at your option) any la
 ## Changelog
 - **0.0.1 8/16/2016 First Commit**
 	- Initial build
+- **0.0.2 9/12/2016 Added Flexslider 2.0**
+	- Added Flexslider in for convenience
+	- Updated Gulpfile to uglify and minify added scripts
 
 ## Features
 
