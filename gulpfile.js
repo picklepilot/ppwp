@@ -45,6 +45,7 @@ gulp.task('sass', function () {
 gulp.task('watch', ['browser-sync'], function () {
     gulp.watch("./src/sass/**/*.scss", ['sass', 'minify-css']);
     gulp.watch("./**/*.php");
+    gulp.watch("./src/js/**/*.js", ['scripts']);
 });
 
 
@@ -56,6 +57,9 @@ gulp.task('scripts', function() {
 		// Start - All BS4 stuff
 		basePaths.dev + 'js/bootstrap.js', 
 		// End - All BS4 stuff
+
+		basePaths.dev + 'js/jquery.flexslider-min.js', // responsive slider
+		//basePaths.dev + 'js/ppwp.js', // custom site scripts
 		
 		])
 		.pipe(concat('theme.min.js'))
@@ -68,6 +72,9 @@ gulp.task('scripts', function() {
 		// Start - All BS4 stuff
 		basePaths.dev + 'js/bootstrap.js', 
 		// End - All BS4 stuff
+
+		basePaths.dev + 'js/jquery.flexslider-min.js', // responsive slider
+		//basePaths.dev + 'js/ppwp.js', // custom site scripts
 		
 		])
 		.pipe(concat('theme.js'))
