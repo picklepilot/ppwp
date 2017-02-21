@@ -13,7 +13,7 @@ var basePaths = {
 };
 
 var browserSyncOptions = {
-    proxy: "http://localhost",
+    proxy: "https://ppwp-picklepilot.c9users.io",
     notify: false
 };
 
@@ -52,14 +52,7 @@ gulp.task('watch', ['browser-sync'], function () {
 // run script uglifier and minifier
 gulp.task('scripts', function() {
 	gulp.src([
-		basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-		
-		// Start - All BS4 stuff
-		basePaths.dev + 'js/bootstrap.js', 
-		// End - All BS4 stuff
-
-		basePaths.dev + 'js/jquery.flexslider-min.js', // responsive slider
-		//basePaths.dev + 'js/ppwp.js', // custom site scripts
+		basePaths.dev + 'js/ppwp.js', // custom site scripts
 		
 		])
 		.pipe(concat('theme.min.js'))
@@ -67,14 +60,7 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./js/'));
 
 	gulp.src([
-		basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-		
-		// Start - All BS4 stuff
-		basePaths.dev + 'js/bootstrap.js', 
-		// End - All BS4 stuff
-
-		basePaths.dev + 'js/jquery.flexslider-min.js', // responsive slider
-		//basePaths.dev + 'js/ppwp.js', // custom site scripts
+		basePaths.dev + 'js/ppwp.js', // custom site scripts
 		
 		])
 		.pipe(concat('theme.js'))
