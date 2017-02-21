@@ -13,6 +13,9 @@ ppwp is released under the terms of the GPL version 3 or (at your option) any la
 - **0.0.2 9/12/2016 Added Flexslider 2.0**
 	- Added Flexslider in for convenience
 	- Updated Gulpfile to uglify and minify added scripts
+- **0.0.3 2/21/2017 Replaced Bootstrap with Inuitcss**
+	- Deleted Bootstrap and inserted https://github.com/inuitcss/inuitcss
+	- I wanted a more BEM oriented framework—something without opions on style
 
 ## Features
 
